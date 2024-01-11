@@ -1,3 +1,4 @@
+# Store
 # https://t.me/Sudokuh
 # Financial assistant based on telegram bot
 
@@ -21,18 +22,28 @@ Aiogram Flask template with webhooks to deploy to pythonanywhere free plan
 
 If you don't use Git, you can simply download the repository source code in a ZIP archive and extract it to your computer.
 
-2. Rename .env.example to .env and follow the instructions inside this file
+2. Create a virtual environment and activate it
+```
+python -m venv venv
+for Mac
+source venv/bin/activate
+or
+for Win
+source venv/Skripts/activate
+```
+
+3. Rename .env.example to .env and follow the instructions inside this file
 
 ## If you are using Docker:
 
-3. Run docker-compose
+4. Run docker-compose
 
 ```
 cd infra/
 
 docker-compose up -d
 ```
-4. If the telegram-budget container does not work correctly, restart the containers:
+5. If the telegram-budget container does not work correctly, restart the containers:
 
 ```
 docker-compose stop
@@ -41,7 +52,7 @@ docker-compose up -d
 
 ## If you are not using Docker
 
-3. In the telegram-budget directory, run the following commands:
+6. In the telegram-budget directory, run the following commands:
 
 ```
 python main.py
